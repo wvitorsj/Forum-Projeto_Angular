@@ -1,0 +1,44 @@
+<div class="container py-2 " *ngIf="question$ | async as question">
+  <div class="row">
+    <div class="col-12">
+      <question-card
+        [title]="question.title"
+        [content]="question.body"
+        creationDate="{{question.createdAt}}"
+        accessLink="{{question.accessLink}}"
+        [showLink]="false" 
+        [showGoBackLink]="true"
+      ></question-card>
+    </div>
+  </div>
+<div>
+  <div class="row mt-2">
+    <div class="col-12">
+      <hr>
+      <h2 class="fw-normal text-center">Quer responder essa pergunta?</h2>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-12">
+      <answer-form (send)="saveAnswer($event)"></answer-form>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-12">
+      <hr>
+      <h2 class="fw-normal">Respostas:</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 d-flex flex-column">
+      <answer-card
+        *ngFor="let answer of question.Answers"
+        class="mt-4"
+        [answer]="answer.answer"
+      ></answer-card>
+    </div>
+  </div>
+</div>

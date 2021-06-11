@@ -1,0 +1,12 @@
+
+.box_pergunta{
+    background-color: rgb(170, 167, 167);
+    width: 110vh;
+    height: 80vh;
+    margin-top: 30px;
+    margin-left: 200px;  
+    box-shadow: 30px 35px 25px 25px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 7px 5px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 5px rgba(0,0,0,0.75); 
+    border-radius: 20px;
+}

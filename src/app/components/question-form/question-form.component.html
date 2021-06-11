@@ -1,0 +1,37 @@
+<div class="card text-white box_pergunta">
+  <div class="card-header text-center ">
+    <p class="fs-1 m-0 text-dark fw-bold">Nova Pergunta</p>
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="row">
+        <div class="col-12">
+          <label for="question-title" class="form-label fs-5">Título da Pergunta</label>
+          <input 
+            type="text" 
+            id="question-title" 
+            placeholder="Meu título" 
+            class="form-control"
+            [(ngModel)]="title"
+            name="title"
+          >
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <label for="question-body" class="form-label fs-5">Escreva sua Pergunta</label>
+          <textarea 
+            class="form-control"
+            id="question-body"
+            style="min-height: 200px;"
+            [(ngModel)]="body"
+            name="body"
+          ></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer d-grid">
+    <button class="btn btn-success text-light" (click)="emitSendEvent()">Enviar</button>
+  </div>
+</div>
